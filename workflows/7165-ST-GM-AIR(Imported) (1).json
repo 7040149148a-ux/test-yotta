@@ -1,0 +1,3709 @@
+{
+  "schema_version": 1,
+  "workflow_id": 7165,
+  "workflow_name": "ST-GM-AIR(Imported) (1)",
+  "workflow": {
+    "edges": [
+      {
+        "id": "e-c843392b-066c-490e-b605-1cd789471932-e413fa09-53ef-4ac0-a377-cfdd6bc048a0",
+        "data": {
+          "condition": "out"
+        },
+        "type": "action",
+        "source": "c843392b-066c-490e-b605-1cd789471932",
+        "target": "e413fa09-53ef-4ac0-a377-cfdd6bc048a0",
+        "sourceHandle": "out",
+        "targetHandle": "in"
+      },
+      {
+        "id": "e-e413fa09-53ef-4ac0-a377-cfdd6bc048a0-bf502ff5-2137-4a47-a735-05fc235ad39d",
+        "data": {
+          "condition": "out"
+        },
+        "type": "action",
+        "source": "e413fa09-53ef-4ac0-a377-cfdd6bc048a0",
+        "target": "bf502ff5-2137-4a47-a735-05fc235ad39d",
+        "sourceHandle": "out",
+        "targetHandle": "in"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "c843392b-066c-490e-b605-1cd789471932",
+        "data": {
+          "icon": "https://s3.ap-south-1.amazonaws.com/y0-uat-assets/y0-uploads/tools/131/Clock.svg",
+          "color": "#E6E7EC",
+          "label": "Schedule Trigger",
+          "value": {
+            "rules": {
+              "mode": "fixed",
+              "value": [
+                {
+                  "days": "1",
+                  "every": 10,
+                  "interval": "seconds",
+                  "timezone": "utc",
+                  "trigger_at_hour": "midnight",
+                  "trigger_at_minute": "0",
+                  "trigger_on_weekdays": "sunday",
+                  "weeks_between_triggers": "1",
+                  "months_between_triggers": "1",
+                  "trigger_at_day_of_month": "1"
+                }
+              ]
+            },
+            "execution_setting": {
+              "notes": "",
+              "on_error": "stop_workflow",
+              "max_retries": 2,
+              "execute_once": false,
+              "retry_on_fail": false,
+              "always_output_data": false,
+              "wait_between_tries": 1000,
+              "display_note_in_flow": false
+            }
+          },
+          "bgColor": "#E6E7EC",
+          "actionId": "131",
+          "operation": null,
+          "description": "Run the flow every day, hour or custom interval",
+          "resourceName": null,
+          "configuration": {
+            "execution_setting": {
+              "notes": "",
+              "on_error": "stop_workflow",
+              "max_retries": 2,
+              "execute_once": false,
+              "retry_on_fail": false,
+              "always_output_data": false,
+              "wait_between_tries": 1000,
+              "display_note_in_flow": false
+            }
+          },
+          "schemaProperties": [
+            {
+              "name": "rules",
+              "type": "array",
+              "fields": [
+                {
+                  "name": "interval",
+                  "type": "options",
+                  "default": "",
+                  "options": [
+                    {
+                      "name": "Seconds",
+                      "value": "seconds",
+                      "description": ""
+                    },
+                    {
+                      "name": "Minutes",
+                      "value": "minutes",
+                      "description": ""
+                    },
+                    {
+                      "name": "Hours",
+                      "value": "hours",
+                      "description": ""
+                    },
+                    {
+                      "name": "Days",
+                      "value": "days",
+                      "description": ""
+                    },
+                    {
+                      "name": "Weeks",
+                      "value": "weeks",
+                      "description": ""
+                    },
+                    {
+                      "name": "Months",
+                      "value": "months",
+                      "description": ""
+                    }
+                  ],
+                  "displayName": "Trigger Interval",
+                  "typeOptions": {},
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "every",
+                  "type": "number",
+                  "default": "",
+                  "required": false,
+                  "description": "Range must be  1 to 59",
+                  "displayName": "Seconds Between Triggers",
+                  "typeOptions": {
+                    "maxValue": 59,
+                    "minValue": 1
+                  },
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "seconds"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "timezone",
+                  "type": "string",
+                  "default": "utc",
+                  "displayName": "Timezone",
+                  "typeOptions": {},
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "seconds"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "every",
+                  "type": "number",
+                  "default": "",
+                  "description": "Range must be  1 to 59",
+                  "displayName": "Minutes Between Triggers",
+                  "typeOptions": {
+                    "maxValue": 59,
+                    "minValue": 0
+                  },
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "minutes"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "timezone",
+                  "type": "string",
+                  "default": "utc",
+                  "displayName": "Timezone",
+                  "typeOptions": {},
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "minutes"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "every",
+                  "type": "number",
+                  "default": "",
+                  "description": "Range must be  1 to 23",
+                  "displayName": "Hours Between Triggers",
+                  "typeOptions": {
+                    "maxValue": 23,
+                    "minValue": 0
+                  },
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "hours"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "trigger_at_minute",
+                  "type": "number",
+                  "default": "0",
+                  "required": false,
+                  "displayName": "Trigger at Minute",
+                  "typeOptions": {},
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "hours"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "days",
+                  "type": "number",
+                  "default": "1",
+                  "description": "Must be in range 1-31",
+                  "displayName": "Days Between Triggers",
+                  "typeOptions": {
+                    "maxValue": 31,
+                    "minValue": 1
+                  },
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "days"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "trigger_at_hour",
+                  "type": "options",
+                  "default": "",
+                  "options": [
+                    {
+                      "name": "Midnight",
+                      "value": "midnight",
+                      "description": ""
+                    },
+                    {
+                      "name": "1am",
+                      "value": "1am",
+                      "description": ""
+                    },
+                    {
+                      "name": "2am",
+                      "value": "2am",
+                      "description": ""
+                    },
+                    {
+                      "name": "3am",
+                      "value": "3am",
+                      "description": ""
+                    },
+                    {
+                      "name": "4am",
+                      "value": "4am",
+                      "description": ""
+                    },
+                    {
+                      "name": "5am",
+                      "value": "5am",
+                      "description": ""
+                    },
+                    {
+                      "name": "6am",
+                      "value": "6am",
+                      "description": ""
+                    },
+                    {
+                      "name": "7am",
+                      "value": "7am",
+                      "description": ""
+                    },
+                    {
+                      "name": "8am",
+                      "value": "8am",
+                      "description": ""
+                    },
+                    {
+                      "name": "9am",
+                      "value": "9am",
+                      "description": ""
+                    },
+                    {
+                      "name": "10am",
+                      "value": "10am",
+                      "description": ""
+                    },
+                    {
+                      "name": "11am",
+                      "value": "11am",
+                      "description": ""
+                    },
+                    {
+                      "name": "Noon",
+                      "value": "noon",
+                      "description": ""
+                    },
+                    {
+                      "name": "1pm",
+                      "value": "1om",
+                      "description": ""
+                    },
+                    {
+                      "name": "2pm",
+                      "value": "2pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "3pm",
+                      "value": "3pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "4pm",
+                      "value": "4pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "5pm",
+                      "value": "5pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "6pm",
+                      "value": "6pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "7pm",
+                      "value": "7pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "8pm",
+                      "value": "8pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "9pm",
+                      "value": "9pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "10pm",
+                      "value": "10pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "11pm",
+                      "value": "11pm",
+                      "description": ""
+                    }
+                  ],
+                  "required": false,
+                  "displayName": "Trigger at Hour",
+                  "typeOptions": {},
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "days"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "weeks_between_triggers",
+                  "type": "number",
+                  "default": "1",
+                  "displayName": "Weeks Between Triggers",
+                  "typeOptions": {},
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "weeks"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "trigger_on_weekdays",
+                  "type": "options",
+                  "default": "sunday",
+                  "options": [
+                    {
+                      "name": "Monday",
+                      "value": "monday",
+                      "description": ""
+                    },
+                    {
+                      "name": "Tuesday",
+                      "value": "tuesday",
+                      "description": ""
+                    },
+                    {
+                      "name": "Wednesday",
+                      "value": "wednesday",
+                      "description": ""
+                    },
+                    {
+                      "name": "Thursday",
+                      "value": "thursday",
+                      "description": ""
+                    },
+                    {
+                      "name": "Friday",
+                      "value": "friday",
+                      "description": ""
+                    },
+                    {
+                      "name": "Saturday",
+                      "value": "saturday",
+                      "description": ""
+                    },
+                    {
+                      "name": "Sunday",
+                      "value": "sunday",
+                      "description": ""
+                    }
+                  ],
+                  "displayName": "Trigger on Weekdays",
+                  "typeOptions": {},
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "weeks"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "trigger_at_hour",
+                  "type": "options",
+                  "default": "midnight",
+                  "options": [
+                    {
+                      "name": "Midnight",
+                      "value": "midnight",
+                      "description": ""
+                    },
+                    {
+                      "name": "1am",
+                      "value": "1am",
+                      "description": ""
+                    },
+                    {
+                      "name": "2am",
+                      "value": "2am",
+                      "description": ""
+                    },
+                    {
+                      "name": "3am",
+                      "value": "3am",
+                      "description": ""
+                    },
+                    {
+                      "name": "4am",
+                      "value": "4am",
+                      "description": ""
+                    },
+                    {
+                      "name": "5am",
+                      "value": "5am",
+                      "description": ""
+                    },
+                    {
+                      "name": "6am",
+                      "value": "6am",
+                      "description": ""
+                    },
+                    {
+                      "name": "7am",
+                      "value": "7am",
+                      "description": ""
+                    },
+                    {
+                      "name": "8am",
+                      "value": "8am",
+                      "description": ""
+                    },
+                    {
+                      "name": "9am",
+                      "value": "9am",
+                      "description": ""
+                    },
+                    {
+                      "name": "10am",
+                      "value": "10am",
+                      "description": ""
+                    },
+                    {
+                      "name": "11am",
+                      "value": "11am",
+                      "description": ""
+                    },
+                    {
+                      "name": "Noon",
+                      "value": "noon",
+                      "description": ""
+                    },
+                    {
+                      "name": "1pm",
+                      "value": "1pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "2pm",
+                      "value": "2pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "3pm",
+                      "value": "3pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "4pm",
+                      "value": "4pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "5pm",
+                      "value": "5pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "6pm",
+                      "value": "6pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "7pm",
+                      "value": "7pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "8pm",
+                      "value": "8pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "9pm",
+                      "value": "9pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "10pm",
+                      "value": "10pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "11pm",
+                      "value": "11pm",
+                      "description": ""
+                    }
+                  ],
+                  "displayName": "Trigger at Hour",
+                  "typeOptions": {},
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "weeks"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "trigger_at_minute",
+                  "type": "number",
+                  "default": "0",
+                  "displayName": "Trigger at minute",
+                  "typeOptions": {},
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "weeks"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "months_between_triggers",
+                  "type": "number",
+                  "default": "1",
+                  "description": "If a month doesn’t have this day, the node won’t trigger",
+                  "displayName": "Months Between Triggers",
+                  "typeOptions": {
+                    "maxValue": 31,
+                    "minValue": 1
+                  },
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "months"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "trigger_at_day_of_month",
+                  "type": "number",
+                  "default": "1",
+                  "displayName": "Trigger at Day of Month",
+                  "typeOptions": {},
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "months"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "trigger_at_hour",
+                  "type": "options",
+                  "default": "midnight",
+                  "options": [
+                    {
+                      "name": "Midnight",
+                      "value": "midnight",
+                      "description": ""
+                    },
+                    {
+                      "name": "1am",
+                      "value": "1am",
+                      "description": ""
+                    },
+                    {
+                      "name": "2am",
+                      "value": "2am",
+                      "description": ""
+                    },
+                    {
+                      "name": "3am",
+                      "value": "3am",
+                      "description": ""
+                    },
+                    {
+                      "name": "4am",
+                      "value": "4am",
+                      "description": ""
+                    },
+                    {
+                      "name": "5am",
+                      "value": "5am",
+                      "description": ""
+                    },
+                    {
+                      "name": "6am",
+                      "value": "6am",
+                      "description": ""
+                    },
+                    {
+                      "name": "7am",
+                      "value": "7am",
+                      "description": ""
+                    },
+                    {
+                      "name": "8am",
+                      "value": "8am",
+                      "description": ""
+                    },
+                    {
+                      "name": "9am",
+                      "value": "9am",
+                      "description": ""
+                    },
+                    {
+                      "name": "10am",
+                      "value": "10am",
+                      "description": ""
+                    },
+                    {
+                      "name": "11am",
+                      "value": "11am",
+                      "description": ""
+                    },
+                    {
+                      "name": "Noon",
+                      "value": "noon",
+                      "description": ""
+                    },
+                    {
+                      "name": "1pm",
+                      "value": "1pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "2pm",
+                      "value": "2pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "3pm",
+                      "value": "3pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "4pm",
+                      "value": "4pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "5pm",
+                      "value": "5pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "6pm",
+                      "value": "6pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "7pm",
+                      "value": "7pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "8pm",
+                      "value": "8pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "9pm",
+                      "value": "9pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "10pm",
+                      "value": "10pm",
+                      "description": ""
+                    },
+                    {
+                      "name": "11pm",
+                      "value": "11pm",
+                      "description": ""
+                    }
+                  ],
+                  "displayName": "Trigger at Hour",
+                  "typeOptions": {},
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "months"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "trigger_at_minute",
+                  "type": "number",
+                  "default": "0",
+                  "displayName": "Trigger at Minute",
+                  "typeOptions": {},
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "months"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "trigger_at_minute",
+                  "type": "number",
+                  "default": "0",
+                  "required": false,
+                  "displayName": "Trigger at Minute",
+                  "typeOptions": {},
+                  "displayOptions": {
+                    "show": {
+                      "interval": [
+                        "days"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                }
+              ],
+              "default": "",
+              "required": false,
+              "displayName": "Trigger Rules",
+              "typeOptions": {},
+              "enable_column_fetch_config": false
+            }
+          ]
+        },
+        "type": "SCHEDULE TRIGGER",
+        "position": {
+          "x": 376,
+          "y": 360
+        },
+        "parameters": {
+          "rules": {
+            "mode": "fixed",
+            "value": [
+              {
+                "days": "1",
+                "every": 10,
+                "interval": "seconds",
+                "timezone": "utc",
+                "trigger_at_hour": "midnight",
+                "trigger_at_minute": "0",
+                "trigger_on_weekdays": "sunday",
+                "weeks_between_triggers": "1",
+                "months_between_triggers": "1",
+                "trigger_at_day_of_month": "1"
+              }
+            ]
+          },
+          "execution_setting": {
+            "notes": "",
+            "on_error": "stop_workflow",
+            "max_retries": 2,
+            "execute_once": false,
+            "retry_on_fail": false,
+            "always_output_data": false,
+            "wait_between_tries": 1000,
+            "display_note_in_flow": false
+          }
+        },
+        "trigger_type": 3,
+        "configuration": {
+          "execution_setting": {
+            "notes": "",
+            "on_error": "stop_workflow",
+            "max_retries": 2,
+            "execute_once": false,
+            "retry_on_fail": false,
+            "always_output_data": false,
+            "wait_between_tries": 1000,
+            "display_note_in_flow": false
+          }
+        },
+        "nodeTypeActions": "trigger"
+      },
+      {
+        "id": "e413fa09-53ef-4ac0-a377-cfdd6bc048a0",
+        "data": {
+          "icon": "https://s3.ap-south-1.amazonaws.com/y0-uat-assets/y0-uploads/tools/108/gmail.svg",
+          "color": "#E6E7EC",
+          "label": "Gmail - Send a message",
+          "value": {
+            "q": {
+              "mode": "fixed",
+              "value": ""
+            },
+            "to": {
+              "mode": "fixed",
+              "value": "atharva.khatu@asmadiya.com"
+            },
+            "name": {
+              "mode": "fixed",
+              "value": ""
+            },
+            "message": {
+              "mode": "fixed",
+              "value": "Hello from Y0"
+            },
+            "subject": {
+              "mode": "fixed",
+              "value": "Q0"
+            },
+            "draft_id": {
+              "mode": "fixed",
+              "value": ""
+            },
+            "label_id": {
+              "mode": "fixed",
+              "value": ""
+            },
+            "maxLimit": {
+              "mode": "fixed",
+              "value": 10
+            },
+            "resource": {
+              "mode": "fixed",
+              "value": "message"
+            },
+            "label_ids": {
+              "mode": "fixed",
+              "value": []
+            },
+            "operation": {
+              "mode": "fixed",
+              "value": "send"
+            },
+            "returnAll": {
+              "mode": "fixed",
+              "value": false
+            },
+            "thread_id": {
+              "mode": "fixed",
+              "value": ""
+            },
+            "maxResults": {
+              "mode": "fixed",
+              "value": 10
+            },
+            "message_id": {
+              "mode": "fixed",
+              "value": ""
+            },
+            "define_form": {
+              "mode": "fixed",
+              "value": "fields_below"
+            },
+            "Content-Type": {
+              "mode": "fixed",
+              "value": "text/plain"
+            },
+            "credential_id": "",
+            "form_elements": {
+              "mode": "fixed",
+              "value": []
+            },
+            "response_type": {
+              "mode": "fixed",
+              "value": "approval"
+            },
+            "approval_options": {
+              "mode": "fixed",
+              "value": []
+            },
+            "execution_setting": {
+              "notes": "",
+              "on_error": "stop_workflow",
+              "max_retries": 2,
+              "execute_once": false,
+              "retry_on_fail": false,
+              "always_output_data": false,
+              "wait_between_tries": 1000,
+              "display_note_in_flow": false
+            }
+          },
+          "bgColor": "#E6E7EC",
+          "actionId": "send",
+          "operation": "send",
+          "description": "Send a mail",
+          "labelSource": "operation",
+          "resourceName": "message",
+          "configuration": {
+            "validationErrors": [],
+            "execution_setting": {}
+          },
+          "schemaProperties": [
+            {
+              "name": "credential_id",
+              "type": "authentication",
+              "default": "gmail_account",
+              "displayName": "Credential to connect with",
+              "typeOptions": {},
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "resource",
+              "type": "options",
+              "default": "message",
+              "options": [
+                {
+                  "name": "Message",
+                  "value": "message",
+                  "description": ""
+                },
+                {
+                  "name": "Label",
+                  "value": "label",
+                  "description": ""
+                },
+                {
+                  "name": "Draft",
+                  "value": "draft",
+                  "description": ""
+                },
+                {
+                  "name": "Thread",
+                  "value": "thread",
+                  "description": ""
+                }
+              ],
+              "required": true,
+              "displayName": "Resource",
+              "typeOptions": {},
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "operation",
+              "type": "options",
+              "default": "send",
+              "options": [
+                {
+                  "name": "Get a message",
+                  "value": "get",
+                  "description": "Retrieve a single message"
+                },
+                {
+                  "name": "Get Many messages",
+                  "value": "getall",
+                  "description": "Retrieve multiple messages"
+                },
+                {
+                  "name": "Send a message",
+                  "value": "send",
+                  "description": "Send a mail"
+                },
+                {
+                  "name": "Add a label",
+                  "value": "add_label",
+                  "description": "Add a label to a message"
+                },
+                {
+                  "name": "Remove a label",
+                  "value": "remove_label",
+                  "description": "Remove a label from a message"
+                },
+                {
+                  "name": "Delete a message",
+                  "value": "delete",
+                  "description": "Remove a message"
+                },
+                {
+                  "name": "Mark as read",
+                  "value": "read",
+                  "description": "Mark a message as read"
+                },
+                {
+                  "name": "Mark as unread",
+                  "value": "unread",
+                  "description": "Mark a message as unread"
+                },
+                {
+                  "name": "Reply to a message",
+                  "value": "reply",
+                  "description": "Reply to a message"
+                },
+                {
+                  "name": "Send and wait for response",
+                  "value": "send_wait",
+                  "description": "Send a message and wait for response"
+                }
+              ],
+              "required": true,
+              "displayName": "Operation",
+              "typeOptions": {},
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "operation",
+              "type": "options",
+              "default": "get",
+              "options": [
+                {
+                  "name": "Get a thread",
+                  "value": "get",
+                  "description": "Retrieve a single thread"
+                },
+                {
+                  "name": "Get Many threads",
+                  "value": "getall",
+                  "description": "Retrieve multiple threads"
+                },
+                {
+                  "name": "Add a label",
+                  "value": "add_label",
+                  "description": "Add a label to a thread"
+                },
+                {
+                  "name": "Remove a label",
+                  "value": "remove_label",
+                  "description": "Remove a label from a thread"
+                },
+                {
+                  "name": "Delete a thread",
+                  "value": "delete",
+                  "description": "Permanently delete a thread"
+                },
+                {
+                  "name": "Trash a thread",
+                  "value": "trash",
+                  "description": "Move a thread to trash"
+                },
+                {
+                  "name": "Untrash a thread",
+                  "value": "untrash",
+                  "description": "Remove thread from trash"
+                },
+                {
+                  "name": "Reply to a message",
+                  "value": "reply",
+                  "description": "Reply to a message in thread"
+                }
+              ],
+              "required": true,
+              "displayName": "Operation",
+              "typeOptions": {},
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "thread"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "operation",
+              "type": "options",
+              "default": "get",
+              "options": [
+                {
+                  "name": "Get a label",
+                  "value": "get",
+                  "description": "Retrieve a single label"
+                },
+                {
+                  "name": "Get Many labels",
+                  "value": "getall",
+                  "description": "Retrieve multiple labels"
+                },
+                {
+                  "name": "Create a label",
+                  "value": "create",
+                  "description": "Create a new label"
+                },
+                {
+                  "name": "Delete a label",
+                  "value": "delete",
+                  "description": "Remove a label"
+                }
+              ],
+              "required": true,
+              "displayName": "Operation",
+              "typeOptions": {},
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "label"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "operation",
+              "type": "options",
+              "default": "get",
+              "options": [
+                {
+                  "name": "Get a Draft",
+                  "value": "get",
+                  "description": "Retrieve a single draft"
+                },
+                {
+                  "name": "Get Many drafts",
+                  "value": "getall",
+                  "description": "Retrieve multiple drafts"
+                },
+                {
+                  "name": "Create a draft",
+                  "value": "create",
+                  "description": "Create a new draft"
+                },
+                {
+                  "name": "Delete a draft",
+                  "value": "delete",
+                  "description": "Remove a draft"
+                }
+              ],
+              "required": true,
+              "displayName": "Operation",
+              "typeOptions": {},
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "draft"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "message_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Message ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "get"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "thread_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Thread ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "thread"
+                  ],
+                  "operation": [
+                    "get"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "label_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Label ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "label"
+                  ],
+                  "operation": [
+                    "get"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "draft_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Draft ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "draft"
+                  ],
+                  "operation": [
+                    "get"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "returnAll",
+              "type": "boolean",
+              "default": false,
+              "required": false,
+              "displayName": "Return All",
+              "typeOptions": {},
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "thread"
+                  ],
+                  "operation": [
+                    "getall"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "maxLimit",
+              "type": "number",
+              "default": 10,
+              "required": false,
+              "displayName": "Limit",
+              "typeOptions": {},
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "thread"
+                  ],
+                  "operation": [
+                    "getall"
+                  ],
+                  "returnAll": [
+                    false
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "returnAll",
+              "type": "boolean",
+              "default": false,
+              "required": false,
+              "displayName": "Return All",
+              "typeOptions": {},
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "getall"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "maxResults",
+              "type": "number",
+              "default": 10,
+              "required": false,
+              "displayName": "Limit",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "getall"
+                  ],
+                  "returnAll": [
+                    false
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "q",
+              "type": "string",
+              "default": "",
+              "required": false,
+              "description": "Gmail search query e.g. from:someone@email.com",
+              "displayName": "Search Query",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "getall"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "returnAll",
+              "type": "boolean",
+              "default": false,
+              "required": false,
+              "displayName": "Return All",
+              "typeOptions": {},
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "label"
+                  ],
+                  "operation": [
+                    "getall"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "maxResults",
+              "type": "number",
+              "default": 10,
+              "required": false,
+              "displayName": "Limit",
+              "typeOptions": {},
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "label"
+                  ],
+                  "operation": [
+                    "getall"
+                  ],
+                  "returnAll": [
+                    false
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "returnAll",
+              "type": "boolean",
+              "default": false,
+              "required": false,
+              "displayName": "Return All",
+              "typeOptions": {},
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "draft"
+                  ],
+                  "operation": [
+                    "getall"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "maxResults",
+              "type": "number",
+              "default": 10,
+              "required": false,
+              "displayName": "Limit",
+              "typeOptions": {},
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "draft"
+                  ],
+                  "operation": [
+                    "getall"
+                  ],
+                  "returnAll": [
+                    false
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "to",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "To",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "send"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "subject",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Subject",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "send"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "Content-Type",
+              "type": "options",
+              "default": "text/plain",
+              "options": [
+                {
+                  "name": "Text",
+                  "value": "text/plain",
+                  "description": ""
+                },
+                {
+                  "name": "HTML",
+                  "value": "text/html",
+                  "description": ""
+                }
+              ],
+              "required": false,
+              "displayName": "Email Type",
+              "typeOptions": {},
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "send"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "message",
+              "type": "textarea",
+              "default": "",
+              "required": true,
+              "displayName": "Message",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "send"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "message_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Message ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "add_label"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "label_ids",
+              "type": "multiOptions",
+              "default": [],
+              "options": [],
+              "required": true,
+              "displayName": "Label Names or IDs",
+              "typeOptions": {
+                "isMulti": true
+              },
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "add_label"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://gmail.googleapis.com/gmail/v1/users/me/labels",
+                "method": "GET",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "labels",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "message_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Message ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "remove_label"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "label_ids",
+              "type": "multiOptions",
+              "default": [],
+              "options": [],
+              "required": true,
+              "displayName": "Label Names or IDs",
+              "typeOptions": {
+                "isMulti": true
+              },
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "remove_label"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://gmail.googleapis.com/gmail/v1/users/me/labels",
+                "method": "GET",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "labels",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "message_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Message ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "delete"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "message_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Message ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "read"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "message_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Message ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "unread"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "message_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "description": "The ID of the message to reply to (used as threadId)",
+              "displayName": "Message ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "reply"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "Content-Type",
+              "type": "options",
+              "default": "text/plain",
+              "options": [
+                {
+                  "name": "Text",
+                  "value": "text/plain",
+                  "description": ""
+                },
+                {
+                  "name": "HTML",
+                  "value": "text/html",
+                  "description": ""
+                }
+              ],
+              "required": false,
+              "displayName": "Email Type",
+              "typeOptions": {},
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "reply"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "message",
+              "type": "textarea",
+              "default": "",
+              "required": true,
+              "displayName": "Message",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "reply"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "to",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "To",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "send_wait"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "subject",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Subject",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "send_wait"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "message",
+              "type": "textarea",
+              "default": "",
+              "required": true,
+              "displayName": "Message",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "send_wait"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "response_type",
+              "type": "options",
+              "default": "approval",
+              "options": [
+                {
+                  "name": "Approval",
+                  "value": "approval",
+                  "description": "User can approve/disapprove from within the message"
+                },
+                {
+                  "name": "Free Text",
+                  "value": "free_text",
+                  "description": "User can submit a response via a form"
+                },
+                {
+                  "name": "Custom Form",
+                  "value": "custom_form",
+                  "description": "User can submit a response via a custom form"
+                }
+              ],
+              "required": false,
+              "displayName": "Response Type",
+              "typeOptions": {},
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "send_wait"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "approval_options",
+              "type": "array",
+              "fields": [
+                {
+                  "name": "type",
+                  "type": "options",
+                  "default": "approve",
+                  "options": [
+                    {
+                      "name": "Approve Only",
+                      "value": "approve",
+                      "description": ""
+                    },
+                    {
+                      "name": "Approve and Disapprove",
+                      "value": "approve_disapprove",
+                      "description": ""
+                    }
+                  ],
+                  "required": false,
+                  "displayName": "Type of approval",
+                  "typeOptions": {},
+                  "is_expression": false,
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "approve_button_label",
+                  "type": "string",
+                  "default": "Approve",
+                  "required": false,
+                  "displayName": "Approve Button Label",
+                  "typeOptions": {},
+                  "is_expression": false,
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "approve_button_style",
+                  "type": "options",
+                  "default": "primary",
+                  "options": [
+                    {
+                      "name": "Primary",
+                      "value": "primary"
+                    },
+                    {
+                      "name": "Secondary",
+                      "value": "secondary"
+                    }
+                  ],
+                  "required": false,
+                  "displayName": "Approve Button Style",
+                  "typeOptions": {},
+                  "is_expression": false,
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "disapprove_button_label",
+                  "type": "string",
+                  "default": "Decline",
+                  "required": false,
+                  "displayName": "Disapprove Button Label",
+                  "typeOptions": {},
+                  "is_expression": false,
+                  "displayOptions": {
+                    "show": {
+                      "type": [
+                        "approve_disapprove"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "disapprove_button_style",
+                  "type": "options",
+                  "default": "secondary",
+                  "options": [
+                    {
+                      "name": "Primary",
+                      "value": "primary"
+                    },
+                    {
+                      "name": "Secondary",
+                      "value": "secondary"
+                    }
+                  ],
+                  "required": false,
+                  "displayName": "Disapprove Button Style",
+                  "typeOptions": {},
+                  "is_expression": false,
+                  "displayOptions": {
+                    "show": {
+                      "type": [
+                        "approve_disapprove"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                }
+              ],
+              "default": "",
+              "required": false,
+              "displayName": "Approval Options",
+              "typeOptions": {
+                "buttonText": "Add Option"
+              },
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "send_wait"
+                  ],
+                  "response_type": [
+                    "approval"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "define_form",
+              "type": "options",
+              "default": "fields_below",
+              "options": [
+                {
+                  "name": "Using fields below",
+                  "value": "fields_below"
+                },
+                {
+                  "name": "Using JSON",
+                  "value": "json"
+                }
+              ],
+              "required": false,
+              "displayName": "Define Form",
+              "typeOptions": {},
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "send_wait"
+                  ],
+                  "response_type": [
+                    "custom_form"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "form_elements",
+              "type": "array",
+              "fields": [
+                {
+                  "name": "field_name",
+                  "type": "string",
+                  "default": "",
+                  "required": false,
+                  "displayName": "Field Name",
+                  "typeOptions": {},
+                  "is_expression": false,
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "element_type",
+                  "type": "options",
+                  "default": "text_input",
+                  "options": [
+                    {
+                      "name": "Checkboxes",
+                      "value": "checkboxes"
+                    },
+                    {
+                      "name": "Custom HTML",
+                      "value": "custom_html"
+                    },
+                    {
+                      "name": "Date",
+                      "value": "date"
+                    },
+                    {
+                      "name": "Dropdown",
+                      "value": "dropdown"
+                    },
+                    {
+                      "name": "Email",
+                      "value": "email"
+                    },
+                    {
+                      "name": "File",
+                      "value": "file"
+                    },
+                    {
+                      "name": "Hidden Field",
+                      "value": "hidden_field"
+                    },
+                    {
+                      "name": "Number",
+                      "value": "number"
+                    },
+                    {
+                      "name": "Password",
+                      "value": "password"
+                    },
+                    {
+                      "name": "Radio Buttons",
+                      "value": "radio_buttons"
+                    },
+                    {
+                      "name": "Text Input",
+                      "value": "text_input"
+                    },
+                    {
+                      "name": "Text Area",
+                      "value": "text_area"
+                    }
+                  ],
+                  "required": false,
+                  "displayName": "Element Type",
+                  "typeOptions": {},
+                  "is_expression": false,
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "placeholder",
+                  "type": "string",
+                  "default": "",
+                  "required": false,
+                  "displayName": "Placeholder",
+                  "typeOptions": {},
+                  "is_expression": false,
+                  "displayOptions": {
+                    "show": {
+                      "element_type": [
+                        "text_input"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "default_value",
+                  "type": "string",
+                  "default": "",
+                  "required": false,
+                  "displayName": "Default Value",
+                  "typeOptions": {},
+                  "is_expression": false,
+                  "displayOptions": {
+                    "show": {
+                      "element_type": [
+                        "text_input"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "required",
+                  "type": "boolean",
+                  "default": false,
+                  "required": false,
+                  "displayName": "Required Field",
+                  "typeOptions": {},
+                  "is_expression": false,
+                  "displayOptions": {
+                    "show": {
+                      "element_type": [
+                        "text_input"
+                      ]
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                }
+              ],
+              "default": "",
+              "required": false,
+              "displayName": "Form Elements",
+              "typeOptions": {
+                "buttonText": "Add Form Element"
+              },
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "message"
+                  ],
+                  "operation": [
+                    "send_wait"
+                  ],
+                  "define_form": [
+                    "fields_below"
+                  ],
+                  "response_type": [
+                    "custom_form"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Name",
+              "typeOptions": {},
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "label"
+                  ],
+                  "operation": [
+                    "create"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "label_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Label ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "label"
+                  ],
+                  "operation": [
+                    "delete"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "subject",
+              "type": "string",
+              "default": "",
+              "required": false,
+              "displayName": "Subject",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "draft"
+                  ],
+                  "operation": [
+                    "create"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "Content-Type",
+              "type": "options",
+              "default": "text/plain",
+              "options": [
+                {
+                  "name": "Text",
+                  "value": "text/plain"
+                },
+                {
+                  "name": "HTML",
+                  "value": "text/html"
+                }
+              ],
+              "required": false,
+              "displayName": "Email Type",
+              "typeOptions": {},
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "draft"
+                  ],
+                  "operation": [
+                    "create"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "message",
+              "type": "textarea",
+              "default": "",
+              "required": false,
+              "displayName": "Message",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "draft"
+                  ],
+                  "operation": [
+                    "create"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "draft_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Draft ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "draft"
+                  ],
+                  "operation": [
+                    "delete"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "thread_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Thread ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "thread"
+                  ],
+                  "operation": [
+                    "add_label"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "label_ids",
+              "type": "multiOptions",
+              "default": [],
+              "options": [],
+              "required": true,
+              "displayName": "Label Names or IDs",
+              "typeOptions": {
+                "isMulti": true
+              },
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "thread"
+                  ],
+                  "operation": [
+                    "add_label"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://gmail.googleapis.com/gmail/v1/users/me/labels",
+                "method": "GET",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "labels",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "thread_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Thread ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "thread"
+                  ],
+                  "operation": [
+                    "remove_label"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "label_ids",
+              "type": "multiOptions",
+              "default": [],
+              "options": [],
+              "required": true,
+              "displayName": "Label Names or IDs",
+              "typeOptions": {
+                "isMulti": true
+              },
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "thread"
+                  ],
+                  "operation": [
+                    "remove_label"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://gmail.googleapis.com/gmail/v1/users/me/labels",
+                "method": "GET",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "labels",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "thread_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Thread ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "thread"
+                  ],
+                  "operation": [
+                    "trash"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "thread_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Thread ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "thread"
+                  ],
+                  "operation": [
+                    "untrash"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "thread_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Thread ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "thread"
+                  ],
+                  "operation": [
+                    "delete"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "thread_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Thread ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "thread"
+                  ],
+                  "operation": [
+                    "reply"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "message_id",
+              "type": "options",
+              "default": "",
+              "options": [],
+              "required": false,
+              "displayName": "Message Snippet or ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "thread"
+                  ],
+                  "operation": [
+                    "reply"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://gmail.googleapis.com/gmail/v1/users/me/threads",
+                "method": "GET",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "threads",
+                  "labelKey": "snippet",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "Content-Type",
+              "type": "options",
+              "default": "text/plain",
+              "options": [
+                {
+                  "name": "Text",
+                  "value": "text/plain"
+                },
+                {
+                  "name": "HTML",
+                  "value": "text/html"
+                }
+              ],
+              "required": false,
+              "displayName": "Email Type",
+              "typeOptions": {},
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "thread"
+                  ],
+                  "operation": [
+                    "reply"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "message",
+              "type": "textarea",
+              "default": "",
+              "required": true,
+              "displayName": "Message",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "thread"
+                  ],
+                  "operation": [
+                    "reply"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            }
+          ]
+        },
+        "type": "GMAIL",
+        "actionId": "send",
+        "position": {
+          "x": 736,
+          "y": 360
+        },
+        "operation": "send",
+        "parameters": {
+          "q": {
+            "mode": "fixed",
+            "value": ""
+          },
+          "to": {
+            "mode": "fixed",
+            "value": "atharva.khatu@asmadiya.com"
+          },
+          "name": {
+            "mode": "fixed",
+            "value": ""
+          },
+          "message": {
+            "mode": "fixed",
+            "value": "Hello from Y0"
+          },
+          "subject": {
+            "mode": "fixed",
+            "value": "Q0"
+          },
+          "draft_id": {
+            "mode": "fixed",
+            "value": ""
+          },
+          "label_id": {
+            "mode": "fixed",
+            "value": ""
+          },
+          "maxLimit": {
+            "mode": "fixed",
+            "value": 10
+          },
+          "resource": {
+            "mode": "fixed",
+            "value": "message"
+          },
+          "label_ids": {
+            "mode": "fixed",
+            "value": []
+          },
+          "operation": {
+            "mode": "fixed",
+            "value": "send"
+          },
+          "returnAll": {
+            "mode": "fixed",
+            "value": false
+          },
+          "thread_id": {
+            "mode": "fixed",
+            "value": ""
+          },
+          "maxResults": {
+            "mode": "fixed",
+            "value": 10
+          },
+          "message_id": {
+            "mode": "fixed",
+            "value": ""
+          },
+          "define_form": {
+            "mode": "fixed",
+            "value": "fields_below"
+          },
+          "Content-Type": {
+            "mode": "fixed",
+            "value": "text/plain"
+          },
+          "credential_id": "",
+          "form_elements": {
+            "mode": "fixed",
+            "value": []
+          },
+          "response_type": {
+            "mode": "fixed",
+            "value": "approval"
+          },
+          "approval_options": {
+            "mode": "fixed",
+            "value": []
+          },
+          "execution_setting": {
+            "notes": "",
+            "on_error": "stop_workflow",
+            "max_retries": 2,
+            "execute_once": false,
+            "retry_on_fail": false,
+            "always_output_data": false,
+            "wait_between_tries": 1000,
+            "display_note_in_flow": false
+          }
+        },
+        "trigger_type": 5,
+        "configuration": {
+          "validationErrors": [],
+          "execution_setting": {}
+        },
+        "nodeTypeActions": "action"
+      },
+      {
+        "id": "bf502ff5-2137-4a47-a735-05fc235ad39d",
+        "data": {
+          "icon": "https://s3.ap-south-1.amazonaws.com/y0-uat-assets/y0-uploads/tools/6/airtable.svg",
+          "color": "#E6E7EC",
+          "label": "Airtable - Get Many",
+          "value": {
+            "base": {
+              "mode": "fixed",
+              "value": {
+                "mode": "list",
+                "value": ""
+              }
+            },
+            "sort": {
+              "mode": "fixed",
+              "value": []
+            },
+            "limit": {
+              "mode": "fixed",
+              "value": "10"
+            },
+            "table": {
+              "mode": "fixed",
+              "value": {
+                "mode": "list",
+                "value": ""
+              }
+            },
+            "baseId": {
+              "mode": "fixed",
+              "value": {
+                "mode": "list",
+                "value": ""
+              }
+            },
+            "filter": {
+              "mode": "fixed",
+              "value": ""
+            },
+            "options": {
+              "mode": "fixed",
+              "value": {
+                "enabled": []
+              }
+            },
+            "resource": {
+              "mode": "fixed",
+              "value": "base"
+            },
+            "operation": {
+              "mode": "fixed",
+              "value": "getall"
+            },
+            "record_id": {
+              "mode": "fixed",
+              "value": ""
+            },
+            "returnAll": {
+              "mode": "fixed",
+              "value": true
+            },
+            "credential_id": "",
+            "mapping_column": {
+              "mode": "fixed",
+              "value": "manual"
+            },
+            "execution_setting": {
+              "notes": "",
+              "on_error": "stop_workflow",
+              "max_retries": 2,
+              "execute_once": false,
+              "retry_on_fail": false,
+              "always_output_data": false,
+              "wait_between_tries": 1000,
+              "display_note_in_flow": false
+            }
+          },
+          "bgColor": "#E6E7EC",
+          "actionId": "getall",
+          "operation": "getall",
+          "description": "Retrieve a single record from a table",
+          "labelSource": "operation",
+          "resourceName": "base",
+          "schemaProperties": [
+            {
+              "name": "credential_id",
+              "type": "authentication",
+              "default": "",
+              "displayName": "Credential to connect with",
+              "typeOptions": {},
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "resource",
+              "type": "options",
+              "default": "",
+              "options": [
+                {
+                  "name": "Base",
+                  "value": "base"
+                },
+                {
+                  "name": "Record",
+                  "value": "record",
+                  "description": ""
+                }
+              ],
+              "displayName": "Resource",
+              "typeOptions": {},
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "operation",
+              "type": "options",
+              "default": "",
+              "options": [
+                {
+                  "name": "Get Many",
+                  "value": "getall",
+                  "description": "Retrieve a single record from a table"
+                },
+                {
+                  "name": "Get Schema",
+                  "value": "getschema",
+                  "description": "Remove a record from a table"
+                }
+              ],
+              "description": "Create, retrieve, update, and delete record and a record.",
+              "displayName": "Operation",
+              "typeOptions": {},
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "base"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "returnAll",
+              "type": "boolean",
+              "default": "true",
+              "displayName": "Return All",
+              "typeOptions": {},
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "base"
+                  ],
+                  "operation": [
+                    "getall"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "limit",
+              "type": "string",
+              "default": "10",
+              "displayName": "Limit",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "base"
+                  ],
+                  "operation": [
+                    "getall"
+                  ],
+                  "returnAll": [
+                    false
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "options",
+              "type": "collection",
+              "default": "",
+              "displayName": "Options",
+              "typeOptions": {},
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "base"
+                  ],
+                  "operation": [
+                    "getall"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "baseId",
+              "type": "baseSelector",
+              "default": "",
+              "displayName": "Base",
+              "typeOptions": {
+                "baseMode": "fromList"
+              },
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "base"
+                  ],
+                  "operation": [
+                    "getschema"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://api.airtable.com/v0/meta/bases",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "bases",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "operation",
+              "type": "options",
+              "default": "",
+              "options": [
+                {
+                  "name": "Get a record",
+                  "value": "get",
+                  "description": "Retrieve a single record from a table"
+                },
+                {
+                  "name": "Delete a record",
+                  "value": "delete",
+                  "description": "Remove a record from a table"
+                },
+                {
+                  "name": "Search for a record",
+                  "value": "search",
+                  "description": "Search for a specific record or list all"
+                },
+                {
+                  "name": "Update a record",
+                  "value": "update",
+                  "description": "Update a record in a table"
+                },
+                {
+                  "name": "Create a record",
+                  "value": "create",
+                  "description": "Create a new record in a table"
+                },
+                {
+                  "name": "Create or Update",
+                  "value": "upsert",
+                  "description": "Create a new record, or update the current one if it already exists (upsert)"
+                }
+              ],
+              "displayName": "Operation",
+              "typeOptions": {},
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "base",
+              "type": "baseSelector",
+              "default": "",
+              "required": false,
+              "displayName": "Base",
+              "typeOptions": {
+                "baseMode": "fromList"
+              },
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "create"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://api.airtable.com/v0/meta/bases",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "bases",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "table",
+              "type": "baseSelector",
+              "default": "",
+              "required": false,
+              "displayName": "Table",
+              "typeOptions": {
+                "baseMode": "fromList"
+              },
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "create"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://api.airtable.com/v0/meta/bases/{{base}}/tables",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "tables",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "mapping_column",
+              "type": "options",
+              "default": "manual",
+              "options": [
+                {
+                  "name": "Map Each Column Manually",
+                  "value": "manual",
+                  "description": "Set the value for each column"
+                },
+                {
+                  "name": "Map Automatically",
+                  "value": "automatic",
+                  "description": "Look for incoming data that matches the columns in Airtable"
+                }
+              ],
+              "required": false,
+              "displayName": "Mapping Column Mode",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "create"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "base",
+              "type": "baseSelector",
+              "default": "",
+              "required": false,
+              "displayName": "Base",
+              "typeOptions": {
+                "baseMode": "fromList"
+              },
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "upsert"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://api.airtable.com/v0/meta/bases",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "bases",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "table",
+              "type": "baseSelector",
+              "default": "",
+              "required": false,
+              "displayName": "Table",
+              "typeOptions": {
+                "baseMode": "fromList"
+              },
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "upsert"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://api.airtable.com/v0/meta/bases/{baseId}/tables",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "tables",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "mapping_column",
+              "type": "options",
+              "default": "manual",
+              "options": [
+                {
+                  "name": "Map Each Column Manually",
+                  "value": "manual",
+                  "description": "Set the value for each column"
+                },
+                {
+                  "name": "Map Automatically",
+                  "value": "automatic",
+                  "description": "Look for incoming data that matches the columns in Airtable"
+                }
+              ],
+              "required": false,
+              "displayName": "Mapping Column Mode",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "upsert"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "base",
+              "type": "baseSelector",
+              "default": "",
+              "required": false,
+              "displayName": "Base",
+              "typeOptions": {
+                "baseMode": "fromList"
+              },
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "delete"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://api.airtable.com/v0/meta/bases",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "bases",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "table",
+              "type": "baseSelector",
+              "default": "",
+              "required": false,
+              "displayName": "Table",
+              "typeOptions": {
+                "baseMode": "fromList"
+              },
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "delete"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://api.airtable.com/v0/meta/bases/{baseId}/tables",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "tables",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "record_id",
+              "type": "string",
+              "default": "",
+              "required": true,
+              "displayName": "Record ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "delete"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "base",
+              "type": "baseSelector",
+              "default": "",
+              "required": false,
+              "displayName": "Base",
+              "typeOptions": {
+                "baseMode": "fromList"
+              },
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "get"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://api.airtable.com/v0/meta/bases",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "bases",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "table",
+              "type": "baseSelector",
+              "default": "",
+              "required": true,
+              "displayName": "Table",
+              "typeOptions": {
+                "baseMode": "fromList"
+              },
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "get"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://api.airtable.com/v0/meta/bases/{baseId}/tables",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "tables",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "record_id",
+              "type": "string",
+              "default": "",
+              "required": false,
+              "displayName": "Record ID",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "get"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "base",
+              "type": "baseSelector",
+              "default": "",
+              "required": false,
+              "displayName": "Base",
+              "typeOptions": {
+                "baseMode": "fromList"
+              },
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "search"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://api.airtable.com/v0/meta/bases",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "bases",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "table",
+              "type": "baseSelector",
+              "default": "",
+              "required": true,
+              "displayName": "Table",
+              "typeOptions": {
+                "baseMode": "fromList"
+              },
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "search"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://api.airtable.com/v0/meta/bases/{baseId}/tables",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "tables",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "filter",
+              "type": "string",
+              "default": "",
+              "required": false,
+              "description": "If empty, all the records will be returned",
+              "displayName": "Filter by Formula",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "search"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "limit",
+              "type": "number",
+              "default": "10",
+              "required": false,
+              "displayName": "Limit",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "search"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "sort",
+              "type": "array",
+              "fields": [
+                {
+                  "name": "field",
+                  "type": "options",
+                  "default": "",
+                  "options": [],
+                  "required": true,
+                  "displayName": "Field",
+                  "typeOptions": {},
+                  "is_expression": true,
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "direction",
+                  "type": "options",
+                  "default": "ASC",
+                  "options": [
+                    {
+                      "name": "ASC",
+                      "value": "ASC",
+                      "description": "Sort in ascending order (small -> large)"
+                    },
+                    {
+                      "name": "DESC",
+                      "value": "DESC",
+                      "description": "Sort in descending order (large -> small)"
+                    }
+                  ],
+                  "required": false,
+                  "displayName": "Direction",
+                  "typeOptions": {},
+                  "is_expression": true,
+                  "enable_column_fetch_config": false
+                }
+              ],
+              "default": "",
+              "required": false,
+              "displayName": "Sort",
+              "typeOptions": {
+                "buttonText": "Add Sort Rule"
+              },
+              "is_expression": false,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "search"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "base",
+              "type": "baseSelector",
+              "default": "",
+              "required": false,
+              "displayName": "Base",
+              "typeOptions": {
+                "baseMode": "fromList"
+              },
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "update"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://api.airtable.com/v0/meta/bases",
+                "enabled": true,
+                "responseMapping": {
+                  "dataPath": "bases",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "table",
+              "type": "baseSelector",
+              "default": "",
+              "required": false,
+              "displayName": "Table",
+              "typeOptions": {
+                "baseMode": "fromList"
+              },
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "update"
+                  ]
+                }
+              },
+              "dynamicOptionsConfig": {
+                "apiUrl": "https://api.airtable.com/v0/meta/bases/{{base}}/tables",
+                "method": "GET",
+                "enabled": true,
+                "dependentOn": "base",
+                "responseMapping": {
+                  "dataPath": "tables",
+                  "labelKey": "name",
+                  "valueKey": "id"
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "mapping_column",
+              "type": "options",
+              "default": "manual",
+              "options": [
+                {
+                  "name": "Map Each Column Manually",
+                  "value": "manual",
+                  "description": "Set the value for each column"
+                },
+                {
+                  "name": "Map Automatically",
+                  "value": "automatic",
+                  "description": "Look for incoming data that matches the columns in Airtable"
+                }
+              ],
+              "required": false,
+              "displayName": "Mapping Column Mode",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "resource": [
+                    "record"
+                  ],
+                  "operation": [
+                    "update"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            }
+          ]
+        },
+        "type": "AIRTABLE",
+        "actionId": "getall",
+        "position": {
+          "x": 1096,
+          "y": 360
+        },
+        "operation": "getall",
+        "parameters": {
+          "base": {
+            "mode": "fixed",
+            "value": {
+              "mode": "list",
+              "value": ""
+            }
+          },
+          "sort": {
+            "mode": "fixed",
+            "value": []
+          },
+          "limit": {
+            "mode": "fixed",
+            "value": "10"
+          },
+          "table": {
+            "mode": "fixed",
+            "value": {
+              "mode": "list",
+              "value": ""
+            }
+          },
+          "baseId": {
+            "mode": "fixed",
+            "value": {
+              "mode": "list",
+              "value": ""
+            }
+          },
+          "filter": {
+            "mode": "fixed",
+            "value": ""
+          },
+          "options": {
+            "mode": "fixed",
+            "value": {
+              "enabled": []
+            }
+          },
+          "resource": {
+            "mode": "fixed",
+            "value": "base"
+          },
+          "operation": {
+            "mode": "fixed",
+            "value": "getall"
+          },
+          "record_id": {
+            "mode": "fixed",
+            "value": ""
+          },
+          "returnAll": {
+            "mode": "fixed",
+            "value": true
+          },
+          "credential_id": "",
+          "mapping_column": {
+            "mode": "fixed",
+            "value": "manual"
+          },
+          "execution_setting": {
+            "notes": "",
+            "on_error": "stop_workflow",
+            "max_retries": 2,
+            "execute_once": false,
+            "retry_on_fail": false,
+            "always_output_data": false,
+            "wait_between_tries": 1000,
+            "display_note_in_flow": false
+          }
+        },
+        "trigger_type": 1,
+        "nodeTypeActions": "action"
+      }
+    ],
+    "notes": [],
+    "viewport": {
+      "x": 0,
+      "y": 0,
+      "zoom": 1
+    }
+  }
+}
