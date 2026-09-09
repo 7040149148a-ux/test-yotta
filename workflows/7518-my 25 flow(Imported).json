@@ -1,0 +1,1016 @@
+{
+  "schema_version": 1,
+  "workflow_id": 7518,
+  "workflow_name": "my 25 flow(Imported)",
+  "workflow": {
+    "edges": [
+      {
+        "id": "e-a7011fb7-ea34-438d-b1ee-918db4ff1a47-19994cbe-6fa8-4aee-aadd-aea809aea426",
+        "data": {
+          "condition": "out",
+          "edge_type": "normal",
+          "loop_node_id": null
+        },
+        "type": "action",
+        "source": "a7011fb7-ea34-438d-b1ee-918db4ff1a47",
+        "target": "19994cbe-6fa8-4aee-aadd-aea809aea426",
+        "sourceHandle": "out",
+        "targetHandle": "in"
+      },
+      {
+        "id": "e-19994cbe-6fa8-4aee-aadd-aea809aea426-28529456-8fc0-4a2b-a098-9547b8fac0bb",
+        "data": {
+          "condition": "out",
+          "edge_type": "normal",
+          "loop_node_id": null
+        },
+        "type": "action",
+        "source": "19994cbe-6fa8-4aee-aadd-aea809aea426",
+        "target": "28529456-8fc0-4a2b-a098-9547b8fac0bb",
+        "sourceHandle": "out",
+        "targetHandle": "in"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "a7011fb7-ea34-438d-b1ee-918db4ff1a47",
+        "data": {
+          "icon": "https://s3.ap-south-1.amazonaws.com/y0-uat-assets/y0-uploads/tools/2/arrow.svg",
+          "color": "#D6ECFF",
+          "label": "Manual",
+          "value": {
+            "notice": "",
+            "execution_setting": {
+              "notes": "",
+              "on_error": "stop_workflow",
+              "max_retries": 2,
+              "execute_once": false,
+              "retry_on_fail": false,
+              "always_output_data": false,
+              "wait_between_tries": 1000,
+              "display_note_in_flow": false
+            }
+          },
+          "bgColor": "#D6ECFF",
+          "actionId": "2",
+          "operation": null,
+          "description": "",
+          "resourceName": null,
+          "configuration": {
+            "outputSchema": {
+              "skeleton": [],
+              "capturedAt": "2026-09-09T12:01:56.882Z"
+            },
+            "execution_setting": {
+              "notes": "",
+              "on_error": "stop_workflow",
+              "max_retries": 2,
+              "execute_once": false,
+              "retry_on_fail": false,
+              "always_output_data": false,
+              "wait_between_tries": 1000,
+              "display_note_in_flow": false
+            }
+          },
+          "is_smtp_enable": false,
+          "schemaProperties": [
+            {
+              "name": "notice",
+              "type": "notice",
+              "default": "",
+              "displayName": "This node is where the workflow execution starts (when you click the test button on the canvas).<br><br> <a data-action=\"showNodeCreator\">Explore other ways to trigger your workflow</a> (e.g on a schedule, or a webhook)",
+              "typeOptions": {},
+              "enable_column_fetch_config": false
+            }
+          ]
+        },
+        "type": "MANUAL",
+        "position": {
+          "x": 176,
+          "y": 216
+        },
+        "dimensions": {
+          "width": 272,
+          "height": 56
+        },
+        "parameters": {
+          "notice": "",
+          "execution_setting": {
+            "notes": "",
+            "on_error": "stop_workflow",
+            "max_retries": 2,
+            "execute_once": false,
+            "retry_on_fail": false,
+            "always_output_data": false,
+            "wait_between_tries": 1000,
+            "display_note_in_flow": false
+          }
+        },
+        "selectable": false,
+        "trigger_type": 0,
+        "configuration": {
+          "outputSchema": {
+            "skeleton": [],
+            "capturedAt": "2026-09-09T12:01:56.882Z"
+          },
+          "execution_setting": {
+            "notes": "",
+            "on_error": "stop_workflow",
+            "max_retries": 2,
+            "execute_once": false,
+            "retry_on_fail": false,
+            "always_output_data": false,
+            "wait_between_tries": 1000,
+            "display_note_in_flow": false
+          }
+        },
+        "nodeTypeActions": "trigger"
+      },
+      {
+        "id": "19994cbe-6fa8-4aee-aadd-aea809aea426",
+        "data": {
+          "icon": "https://s3.ap-south-1.amazonaws.com/y0-uat-assets/y0-uploads/tools/135/edit_files_logo.svg",
+          "color": "#E6E7EC",
+          "label": "Edit Fields (Set)",
+          "value": {
+            "json": "{   \"my_field_1\": \"value\",   \"my_field_2\": 1 }",
+            "mode": "manual",
+            "json-mode": "expression",
+            "operation": "135",
+            "field_to_set": [
+              {
+                "key": "age",
+                "value": "28",
+                "keyMode": "fixed",
+                "valueMode": "fixed",
+                "valueType": "string"
+              }
+            ],
+            "other_fields": false,
+            "execution_setting": {
+              "notes": "",
+              "on_error": "stop_workflow",
+              "max_retries": 2,
+              "execute_once": false,
+              "retry_on_fail": false,
+              "always_output_data": false,
+              "wait_between_tries": 1000,
+              "display_note_in_flow": false
+            },
+            "fields_to_exclude": "",
+            "fields_to_include": "",
+            "input_fields_to_include": "all"
+          },
+          "bgColor": "#E6E7EC",
+          "actionId": "135",
+          "operation": "135",
+          "is_focused": false,
+          "description": "Modify, add, or remove item  fields",
+          "resourceName": null,
+          "configuration": {
+            "output": null,
+            "isPinned": false,
+            "outputSchema": {
+              "skeleton": [
+                {
+                  "age": ""
+                }
+              ],
+              "capturedAt": "2026-09-09T12:01:56.906Z"
+            },
+            "isDeactivated": false,
+            "execution_setting": {
+              "notes": "",
+              "on_error": "stop_workflow",
+              "max_retries": 2,
+              "execute_once": false,
+              "retry_on_fail": false,
+              "always_output_data": false,
+              "wait_between_tries": 1000,
+              "display_note_in_flow": false
+            }
+          },
+          "focused_field": null,
+          "is_smtp_enable": false,
+          "nodeTypeActions": "transformation",
+          "schemaProperties": [
+            {
+              "name": "mode",
+              "type": "options",
+              "default": "manual",
+              "options": [
+                {
+                  "name": "Manual Mapping",
+                  "value": "manual",
+                  "description": "Edit item fields one by one"
+                },
+                {
+                  "name": "JSON",
+                  "value": "json",
+                  "description": "Customize item output with JSON"
+                }
+              ],
+              "required": false,
+              "displayName": "Mode",
+              "typeOptions": {},
+              "is_expression": true,
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "json",
+              "type": "json",
+              "default": "{   \"my_field_1\": \"value\",   \"my_field_2\": 1 }",
+              "required": false,
+              "displayName": "JSON",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "mode": [
+                    "json"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "field_to_set",
+              "type": "field_array",
+              "default": "",
+              "required": false,
+              "fieldArray": [
+                {
+                  "name": "name",
+                  "type": "string",
+                  "default": "",
+                  "options": [],
+                  "description": "",
+                  "displayName": "Name",
+                  "placeholder": "name"
+                }
+              ],
+              "displayName": "Fields to Set",
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "mode": [
+                    "manual"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "other_fields",
+              "type": "boolean",
+              "default": "false",
+              "required": false,
+              "displayName": "Include Other Input Fields",
+              "typeOptions": {},
+              "is_expression": true,
+              "is_reset_disabled": false,
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "input_fields_to_include",
+              "type": "options",
+              "default": "all",
+              "options": [
+                {
+                  "name": "All",
+                  "value": "all",
+                  "description": "Also include all unchanged fields from the input"
+                },
+                {
+                  "name": "Selected",
+                  "value": "selected",
+                  "description": "Also include the fields listed in the parameter \"Fields To Include\""
+                },
+                {
+                  "name": "All Except",
+                  "value": "except",
+                  "description": "Exclude the fields listed in the parameter \"Fields to Exclude\""
+                }
+              ],
+              "required": false,
+              "displayName": "Input Fields to Include",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "other_fields": [
+                    true
+                  ]
+                }
+              },
+              "is_reset_disabled": false,
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "fields_to_include",
+              "type": "string",
+              "default": "",
+              "required": false,
+              "displayName": "Fields To Include",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "other_fields": [
+                    true
+                  ],
+                  "input_fields_to_include": [
+                    "selected"
+                  ]
+                }
+              },
+              "is_reset_disabled": false,
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "fields_to_exclude",
+              "type": "string",
+              "default": "",
+              "required": false,
+              "displayName": "Fields To Exclude",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "other_fields": [
+                    true
+                  ],
+                  "input_fields_to_include": [
+                    "except"
+                  ]
+                }
+              },
+              "is_reset_disabled": false,
+              "enable_column_fetch_config": false
+            }
+          ],
+          "focused_field_meta": null
+        },
+        "type": "EDIT FIELDS (SET)",
+        "actionId": "135",
+        "position": {
+          "x": 552,
+          "y": 216
+        },
+        "operation": "135",
+        "dimensions": {
+          "width": 251,
+          "height": 56
+        },
+        "parameters": {
+          "json": "{   \"my_field_1\": \"value\",   \"my_field_2\": 1 }",
+          "mode": "manual",
+          "json-mode": "expression",
+          "operation": "135",
+          "field_to_set": [
+            {
+              "key": "age",
+              "value": "28",
+              "keyMode": "fixed",
+              "valueMode": "fixed",
+              "valueType": "string"
+            }
+          ],
+          "other_fields": false,
+          "execution_setting": {
+            "notes": "",
+            "on_error": "stop_workflow",
+            "max_retries": 2,
+            "execute_once": false,
+            "retry_on_fail": false,
+            "always_output_data": false,
+            "wait_between_tries": 1000,
+            "display_note_in_flow": false
+          },
+          "fields_to_exclude": "",
+          "fields_to_include": "",
+          "input_fields_to_include": "all"
+        },
+        "selectable": false,
+        "trigger_type": null,
+        "configuration": {
+          "output": null,
+          "isPinned": false,
+          "outputSchema": {
+            "skeleton": [
+              {
+                "age": ""
+              }
+            ],
+            "capturedAt": "2026-09-09T12:01:56.906Z"
+          },
+          "isDeactivated": false,
+          "execution_setting": {
+            "notes": "",
+            "on_error": "stop_workflow",
+            "max_retries": 2,
+            "execute_once": false,
+            "retry_on_fail": false,
+            "always_output_data": false,
+            "wait_between_tries": 1000,
+            "display_note_in_flow": false
+          }
+        },
+        "nodeTypeActions": "transformation"
+      },
+      {
+        "id": "28529456-8fc0-4a2b-a098-9547b8fac0bb",
+        "data": {
+          "icon": "https://s3.ap-south-1.amazonaws.com/y0-uat-assets/y0-uploads/tools/5/ifCondition.svg",
+          "color": "#E6E7EC",
+          "label": "If",
+          "value": {
+            "operation": "5",
+            "conditions": [
+              {
+                "value1": "",
+                "value2": "28",
+                "operator": {
+                  "operator": "equals",
+                  "valueType": "string"
+                },
+                "operation": "and"
+              }
+            ],
+            "execution_setting": {
+              "notes": "",
+              "on_error": "stop_workflow",
+              "max_retries": 2,
+              "execute_once": false,
+              "retry_on_fail": false,
+              "always_output_data": false,
+              "wait_between_tries": 1000,
+              "display_note_in_flow": false
+            }
+          },
+          "bgColor": "#E6E7EC",
+          "actionId": "5",
+          "operation": "5",
+          "is_focused": false,
+          "description": "Route items depending on defined expression or rules ",
+          "resourceName": null,
+          "configuration": {
+            "outputSchema": {
+              "skeleton": [
+                {
+                  "age": ""
+                }
+              ],
+              "capturedAt": "2026-09-09T12:01:56.922Z"
+            },
+            "execution_setting": {
+              "notes": "",
+              "on_error": "stop_workflow",
+              "max_retries": 2,
+              "execute_once": false,
+              "retry_on_fail": false,
+              "always_output_data": false,
+              "wait_between_tries": 1000,
+              "display_note_in_flow": false
+            }
+          },
+          "focused_field": null,
+          "is_smtp_enable": false,
+          "nodeTypeActions": "conditional",
+          "schemaProperties": [
+            {
+              "name": "conditions",
+              "type": "array",
+              "fields": [
+                {
+                  "name": "value1",
+                  "type": "string",
+                  "default": "",
+                  "options": [],
+                  "fieldArray": [],
+                  "displayName": "Value 1",
+                  "typeOptions": {},
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "operator",
+                  "type": "operator",
+                  "default": "exists",
+                  "options": [],
+                  "fieldArray": [],
+                  "displayName": "Operators",
+                  "typeOptions": {
+                    "operators": [
+                      {
+                        "key": "string",
+                        "icon": "PhTextT",
+                        "label": "string",
+                        "operators": [
+                          {
+                            "label": "exists",
+                            "value": "exists",
+                            "noValue": true
+                          },
+                          {
+                            "label": "does not exists",
+                            "value": "does_not_exists",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is empty",
+                            "value": "is_empty",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is not empty",
+                            "value": "is_not_empty",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is equal to",
+                            "value": "equals",
+                            "noValue": false
+                          },
+                          {
+                            "label": "is not equal to",
+                            "value": "not_equals",
+                            "noValue": false
+                          },
+                          {
+                            "label": "contains",
+                            "value": "contains",
+                            "noValue": false
+                          },
+                          {
+                            "label": "does not contain",
+                            "value": "does_not_contain",
+                            "noValue": false
+                          },
+                          {
+                            "label": "starts with",
+                            "value": "starts_with",
+                            "noValue": false
+                          },
+                          {
+                            "label": "does not start with",
+                            "value": "does_not_start_with",
+                            "noValue": false
+                          },
+                          {
+                            "label": "ends with",
+                            "value": "ends_with",
+                            "noValue": false
+                          },
+                          {
+                            "label": "does not end with",
+                            "value": "does_not_end_with",
+                            "noValue": false
+                          },
+                          {
+                            "label": "matches regex",
+                            "value": "matches_regex",
+                            "noValue": false
+                          },
+                          {
+                            "label": "does not match regex",
+                            "value": "does_not_match_regex",
+                            "noValue": false
+                          }
+                        ]
+                      },
+                      {
+                        "key": "number",
+                        "icon": "PhHash",
+                        "label": "number",
+                        "operators": [
+                          {
+                            "label": "exists",
+                            "value": "exists",
+                            "noValue": true
+                          },
+                          {
+                            "label": "does not exists",
+                            "value": "does_not_exists",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is empty",
+                            "value": "is_empty",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is not empty",
+                            "value": "is_not_empty",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is equal to",
+                            "value": "equals",
+                            "noValue": false
+                          },
+                          {
+                            "label": "is not equal to",
+                            "value": "not_equals",
+                            "noValue": false
+                          },
+                          {
+                            "label": "is greater than",
+                            "value": "greater_than",
+                            "noValue": false
+                          },
+                          {
+                            "label": "is less than",
+                            "value": "less_than",
+                            "noValue": false
+                          },
+                          {
+                            "label": "is greater than or equal to",
+                            "value": "is_greater_than_or_equal_to",
+                            "noValue": false
+                          },
+                          {
+                            "label": "is less than or equal to",
+                            "value": "is_less_than_or_equal_to",
+                            "noValue": false
+                          }
+                        ]
+                      },
+                      {
+                        "key": "date_&_time",
+                        "icon": "PhCalendar",
+                        "label": "Date & Time",
+                        "operators": [
+                          {
+                            "label": "exists",
+                            "value": "exists",
+                            "noValue": true
+                          },
+                          {
+                            "label": "does not exist",
+                            "value": "does_not_exist",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is empty",
+                            "value": "is_empty",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is not empty",
+                            "value": "is_not_empty",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is equal to",
+                            "value": "is_equal_to",
+                            "noValue": false
+                          },
+                          {
+                            "label": "is not equal to",
+                            "value": "is_not_equal_to",
+                            "noValue": false
+                          },
+                          {
+                            "label": "is after",
+                            "value": "is_after",
+                            "noValue": false
+                          },
+                          {
+                            "label": "is before",
+                            "value": "is_before",
+                            "noValue": false
+                          },
+                          {
+                            "label": "is after or equal to",
+                            "value": "is_after_or_equal_to",
+                            "noValue": false
+                          },
+                          {
+                            "label": "is before or equal to",
+                            "value": "is_before_or_equal_to",
+                            "noValue": false
+                          }
+                        ]
+                      },
+                      {
+                        "key": "boolean",
+                        "icon": "PhCheckSquare",
+                        "label": "Boolean",
+                        "operators": [
+                          {
+                            "label": "exists",
+                            "value": "exists",
+                            "noValue": true
+                          },
+                          {
+                            "label": "does not exist",
+                            "value": "does_not_exist",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is empty",
+                            "value": "is_empty",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is not empty",
+                            "value": "is_not_empty",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is true",
+                            "value": "is_true",
+                            "noValue": false
+                          },
+                          {
+                            "label": "is false",
+                            "value": "is_false",
+                            "noValue": false
+                          },
+                          {
+                            "label": "is equal to",
+                            "value": "is_equal_to",
+                            "noValue": false
+                          },
+                          {
+                            "label": "is not equal to",
+                            "value": "is_not_equal_to",
+                            "noValue": false
+                          }
+                        ]
+                      },
+                      {
+                        "key": "array",
+                        "icon": "PhList",
+                        "label": "Array",
+                        "operators": [
+                          {
+                            "label": "exists",
+                            "value": "exists",
+                            "noValue": true
+                          },
+                          {
+                            "label": "does not exist",
+                            "value": "does_not_exist",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is empty",
+                            "value": "is_empty",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is not empty",
+                            "value": "is_not_empty",
+                            "noValue": true
+                          },
+                          {
+                            "label": "contains",
+                            "value": "contains",
+                            "noValue": false
+                          },
+                          {
+                            "label": "does not contain",
+                            "value": "does_not_contain",
+                            "noValue": false
+                          },
+                          {
+                            "label": "length equal to",
+                            "value": "length_equal_to",
+                            "noValue": false
+                          },
+                          {
+                            "label": "length not equal to",
+                            "value": "length_not_equal_to",
+                            "noValue": false
+                          },
+                          {
+                            "label": "length greater than",
+                            "value": "length_greater_than",
+                            "noValue": false
+                          },
+                          {
+                            "label": "length less than",
+                            "value": "length_less_than",
+                            "noValue": false
+                          },
+                          {
+                            "label": "length greater than or equal to",
+                            "value": "length_greater_than_or_equal_to",
+                            "noValue": false
+                          },
+                          {
+                            "label": "length less than or equal to",
+                            "value": "length_less_than_or_equal_to",
+                            "noValue": false
+                          }
+                        ]
+                      },
+                      {
+                        "key": "object",
+                        "icon": "PhCube",
+                        "label": "Object",
+                        "operators": [
+                          {
+                            "label": "exists",
+                            "value": "exists",
+                            "noValue": true
+                          },
+                          {
+                            "label": "does not exist",
+                            "value": "does_not_exist",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is empty",
+                            "value": "is_empty",
+                            "noValue": true
+                          },
+                          {
+                            "label": "is not empty",
+                            "value": "is_not_empty",
+                            "noValue": true
+                          }
+                        ]
+                      }
+                    ],
+                    "valueFieldMapping": {
+                      "number": "number",
+                      "string": "string",
+                      "boolean": "string",
+                      "date_&_time": "dateTime"
+                    }
+                  },
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "value2",
+                  "type": "string",
+                  "default": "",
+                  "options": [],
+                  "fieldArray": [],
+                  "displayName": "Value 2",
+                  "typeOptions": {},
+                  "enable_column_fetch_config": false
+                },
+                {
+                  "name": "operation",
+                  "type": "logicalOperator",
+                  "default": "and",
+                  "options": [
+                    {
+                      "name": "AND",
+                      "value": "and"
+                    },
+                    {
+                      "name": "OR",
+                      "value": "or"
+                    }
+                  ],
+                  "fieldArray": [],
+                  "displayName": "",
+                  "typeOptions": {},
+                  "enable_column_fetch_config": false
+                }
+              ],
+              "default": "",
+              "options": [],
+              "fieldArray": [],
+              "displayName": "Conditions",
+              "typeOptions": {
+                "buttonText": "Add Condition"
+              },
+              "enable_column_fetch_config": false
+            }
+          ],
+          "focused_field_meta": null
+        },
+        "type": "IF",
+        "actionId": "5",
+        "position": {
+          "x": 896,
+          "y": 160
+        },
+        "operation": "5",
+        "dimensions": {
+          "width": 150,
+          "height": 170
+        },
+        "parameters": {
+          "operation": "5",
+          "conditions": [
+            {
+              "value1": "",
+              "value2": "28",
+              "operator": {
+                "operator": "equals",
+                "valueType": "string"
+              },
+              "operation": "and"
+            }
+          ],
+          "execution_setting": {
+            "notes": "",
+            "on_error": "stop_workflow",
+            "max_retries": 2,
+            "execute_once": false,
+            "retry_on_fail": false,
+            "always_output_data": false,
+            "wait_between_tries": 1000,
+            "display_note_in_flow": false
+          }
+        },
+        "selectable": false,
+        "trigger_type": null,
+        "configuration": {
+          "outputSchema": {
+            "skeleton": [
+              {
+                "age": ""
+              }
+            ],
+            "capturedAt": "2026-09-09T12:01:56.922Z"
+          },
+          "execution_setting": {
+            "notes": "",
+            "on_error": "stop_workflow",
+            "max_retries": 2,
+            "execute_once": false,
+            "retry_on_fail": false,
+            "always_output_data": false,
+            "wait_between_tries": 1000,
+            "display_note_in_flow": false
+          }
+        },
+        "nodeTypeActions": "conditional"
+      }
+    ],
+    "notes": [
+      {
+        "id": "7961e933-3d7b-4c84-9539-3cf3ba70f617",
+        "color": "var(--sticky-yellow-fill)",
+        "width": 240,
+        "height": 240,
+        "content": "rtt5t",
+        "fontSize": 32,
+        "position": {
+          "x": 551,
+          "y": 324
+        },
+        "authorName": "Sumit1997",
+        "fontFamily": "",
+        "showAuthor": true,
+        "outlineColor": "var(--sticky-yellow-outline)"
+      },
+      {
+        "id": "fa33ff4f-04e5-44d2-bfce-bfae45a572d6",
+        "color": "var(--sticky-yellow-fill)",
+        "width": 240,
+        "height": 240,
+        "content": "<ul><li><b style=\"background-color: var(--sticky-yellow-fill);\"><a href=\"https://uiworkspace-uat.y0.dev/workflow/7Uhg9Q7HmAG6k98yZkMvtJjbU_2Bp7KMifeNQmqL5ZhQc589FbJ6ncXr1qm7Cg~~\">https://uiworkspace-uat.y0.dev/workflow/7Uhg9Q7HmAG6k98yZkMvtJjbU_2Bp7KMifeNQmqL5ZhQc589FbJ6ncXr1qm7Cg~~</a>ttttggtg<strike>ffffggggg</strike></b></li></ul>",
+        "fontSize": 0,
+        "position": {
+          "x": 284,
+          "y": 338
+        },
+        "authorName": "Sumit1997",
+        "fontFamily": "",
+        "showAuthor": false,
+        "outlineColor": "var(--sticky-yellow-outline)"
+      },
+      {
+        "id": "55d3bfda-c9f1-4ac3-a70a-be382a87d48e",
+        "color": "var(--sticky-grey-fill)",
+        "width": 240,
+        "height": 240,
+        "content": "rt5t5ttt5t5t5t5t",
+        "fontSize": 14,
+        "position": {
+          "x": 869,
+          "y": 357
+        },
+        "authorName": "Sumit1997",
+        "fontFamily": "",
+        "showAuthor": false,
+        "outlineColor": "var(--sticky-grey-outline)"
+      },
+      {
+        "id": "8ccd9c0d-42f5-4274-b6ac-a1ac0c6747d6",
+        "color": "var(--sticky-yellow-fill)",
+        "content": "",
+        "position": {
+          "x": 1240,
+          "y": 295
+        },
+        "authorName": "Sumit1997",
+        "showAuthor": false,
+        "outlineColor": "var(--sticky-yellow-outline)"
+      }
+    ],
+    "viewport": {
+      "x": 0,
+      "y": 0,
+      "zoom": 1
+    }
+  }
+}
